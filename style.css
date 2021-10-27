@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-font: 'Raleway', sans-serif;
+    --secondary-font: 'Roboto Condensed', sans-serif;
+    --primary-color: #4792a5;
+    --ligt-color: #efefef;
+    --dark-color: #3c3c3c;
+    --general-transition: all .4s ease;
+    --pad-right: 4rem;
+    --pad-left: 4rem ;
+}
+.container{
+    background-color: rgb(5, 5, 20);
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    overflow: scroll;
+}
+h1{
+    padding: 4rem 0;
+    color: white;
+}
+
+.add{   
+display: flex;
+justify-content: center;
+}
+.inputs {
+    border: 1px solid #bdbdbd;
+    border-radius: 0.3rem;
+   background-color: white;
+   width: 30%;
+}
+#text{
+    width: 90%;
+    height: 35px;
+    border: none;
+    font-size: 20px;
+}
+#text:focus{
+      outline: none;
+  }
+  #addItem{
+    cursor: pointer;
+}
+#new{
+    margin-top: 1rem;
+}
+
+/* LİST SECTİON */
+/* Remove margins and padding from the list */
+#myUL {
+    margin: 0;
+    padding: 0;
+   
+}
+  
+  /* Style the list items */
+ #myUL li {
+    cursor: pointer;
+    position: relative;
+    left: 35%;
+    width: 30%;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+    color: black;
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+ #myUL ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  #myUL ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: black;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  /* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+
+/* FOOTER SECTION */
+footer {
+    position: fixed;
+    width: 100%;
+    color: var(--ligt-color);
+    padding: 2rem 0;
+    
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+}
+.social-media {
+    display: flex;
+    align-items: center;
+    
+}
+.social-media h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+}
+.social-list {
+    display: flex;
+    margin-left: 2rem;
+    font-size: 2rem;
+    list-style: none;
+}
+.social-list li {
+    padding: 0;
+    text-align: center;
+}
+.social-list li span{
+    display: none;
+}
+.social-list li a {
+    color: var(--ligt-color);
+    border: 1px solid var(--ligt-color);
+    display:inline-block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    transition: var(--general-transition);
+}
+.social-list li a i{
+    line-height: 4rem;     /*burada iconu ortaladık */
+}
+.social-list li:nth-child(1) a:hover{
+    background-color: #38a1f3;
+    border-color: transparent;
+}
+.social-list li:nth-child(2) a:hover{
+    background-color: #171515;
+    border-color: transparent;
+}.social-list li:nth-child(3) a:hover{
+    background-color: #3B5998;
+    border-color: transparent;
+}.social-list li:nth-child(4) a:hover{
+    background-color: #ff0000;
+    border-color: transparent;
+}
+.copy-right{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+.back-top{
+    justify-self: end;
+    text-align: center;
+}
+.back-top i{
+    font-size: 2rem;
+
+}
+.back-top a {
+    display: inline-block;
+    height:4rem;
+    width: 4rem;
+    border: .1rem solid var(--ligt-color) ;
+    line-height: 4rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transition: var(--general-transition);
+}
+.back-top a:hover{
+    border-color: transparent;
+    background-color: var(--ligt-color);
+    color: var(--primary-color);
+}
+
+
